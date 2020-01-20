@@ -27,7 +27,7 @@ public class RegisterController extends HttpServlet
 		try 
 		{
 			Connection con=DriverManager.getConnection("jdbc:mysql://35.255.40.133:3306/db","root","root");
-			PreparedStatement ps=con.prepareStatement("insert into users values(?,?,?)");
+			PreparedStatement ps=con.prepareStatement("insert into users (username,email,password) values(?,?,?)");
 			ps.setString(1, u.getUsername());
 			ps.setString(2, u.getEmail());
 			ps.setString(3, u.getPassword());
