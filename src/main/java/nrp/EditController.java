@@ -64,13 +64,13 @@ import nrp.model.Mobile;
 			try 
 			{
 				Connection con=DriverManager.getConnection("jdbc:mysql://35.225.40.133:3306/db","root","root");
-				PreparedStatement ps=con.prepareStatement("update mobiles set mobilename=?, model=?, price=? where bookid=?");
+				PreparedStatement ps=con.prepareStatement("update mobiles set mobilename=?, model=?, price=? where productid=?");
 				ps.setString(1,m.getMobilename());
 				ps.setString(2,m.getModel());
 				ps.setFloat(3,m.getPrice());
 				ps.setInt(4,m.getProductid());
 				ps.executeUpdate();
-				resp.sendRedirect("mobile.jsp");
+				resp.sendRedirect("displaymobile.jsp");
 			}
 			catch (Exception e) 
 			{

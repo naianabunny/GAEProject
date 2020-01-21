@@ -17,48 +17,48 @@
 	
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<c:if test="${book==null}">
+		<c:if test="${mobile==null}">
 			<form class="col-lg-6 col-md-6 col-sm-12 col-xs-12 myform" action="AddMobileController" method="post" enctype="multipart/form-data">
 		</c:if>
 		
-		<c:if test="${book!=null}">
+		<c:if test="${mobile!=null}">
 		<form class="col-lg-6 col-md-6 col-sm-12 col-xs-12 myform" action="EditController" method="post">
 		</c:if>
 		
-		<c:if test="${book!=null}">
+		<c:if test="${mobile!=null}">
 			<div class="form-group">
-				<label>Enter Book Id</label>
-				<input type="text" name="bookid" placeholder="Enter Book id" class="form-control" value="${book.bookid}" readonly/>
+				<label>Enter product Id</label>
+				<input type="text" name="productid" placeholder="Enter product id" class="form-control" value="${mobile.productid}" readonly/>
 			</div>
 			</c:if>
 			
 			<div class="form-group">
-				<label>Enter Book Name</label>
-				<input type="text" name="mobilename" placeholder="Enter Book Name" class="form-control" value="${book.bookname}"/>
+				<label>Enter mobile Name</label>
+				<input type="text" name="mobilename" placeholder="Enter mobile Name" class="form-control" value="${mobile.mobilename}"/>
 			</div>
 			
 			<div class="form-group">
-				<label>Enter Author</label>
-				<input type="text" name="model" placeholder="Enter Author" class="form-control" value="${book.author}"/>
-			</div>
-			
-			<div class="form-group">
-				<label>Enter Price</label>
-				<input type="text" name="price" placeholder="Enter Price" class="form-control" value="${book.price}"/>
+				<label>Enter model</label>
+				<input type="text" name="model" placeholder="Enter model" class="form-control" value="${mobile.model}"/>
 			</div>
 			
 			<div class="form-group">
 				<label>Enter Price</label>
+				<input type="text" name="price" placeholder="Enter Price" class="form-control" value="${mobile.price}"/>
+			</div>
+			
+			<div class="form-group">
+				<label>Enter image</label>
 				<input type="file"  accept="image/*" name="image" placeholder="Select Image" class="form-control"/>
 			</div>
 			
 			<div class="form-group">
-				<c:if test="${book==null}">
-				<input type="submit" value="Add Book" class="btn btn-primary btn-block"/>
+				<c:if test="${mobile==null}">
+				<input type="submit" value="Add mobile" class="btn btn-primary btn-block"/>
 				</c:if>
 				
-				<c:if test="${book!=null}">
-				<input type="submit" value="Edit Book" class="btn btn-primary btn-block"/>
+				<c:if test="${mobile!=null}">
+				<input type="submit" value="Edit mobile" class="btn btn-primary btn-block"/>
 				</c:if>
 				<input type="reset" value="Reset" class="btn btn-danger btn-block"/>
 			</div>

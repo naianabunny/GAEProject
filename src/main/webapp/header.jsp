@@ -32,7 +32,7 @@
         <a class="nav-link" href="register.jsp">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="addmobiles.jsp">add mobiles</a>
+        <a class="nav-link" href="addmobile.jsp">add mobiles</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="displaymobiles.jsp">mobiles</a>
